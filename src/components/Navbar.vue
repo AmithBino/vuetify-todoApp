@@ -1,18 +1,18 @@
 <template>
-    <nav>
-        <v-toolbar :elevation="6">
-            <v-app-bar-nav-icon class="text-grey" @click="drawer=!drawer"> </v-app-bar-nav-icon>
+    <nav> 
+        <v-app-bar flat class="bg-purple-darken-3">
+            <v-app-bar-nav-icon class="text-white" @click="drawer=!drawer"> </v-app-bar-nav-icon>
             <v-toolbar-title class="text-uppercase">
             <span class="font-weight-light">Todo</span> 
-            <span class="text-deep-purple-darken-4">Wave</span>
+            <span class="white">Wave</span>
         </v-toolbar-title>
         <v-space></v-space>
-        <v-btn flat-color="grey">
+        <v-btn flat-color="white">
             <span>Sign out</span>
             <v-icon right class="mdi mdi-exit-to-app"></v-icon>
         </v-btn>
-       </v-toolbar> 
-       <v-navigation-drawer app temporary v-model="drawer" class="bg-deep-purple-darken-4">
+       </v-app-bar> 
+       <v-navigation-drawer app temporary v-model="drawer" class="bg-purple-darken-3" clipped>
         <v-list>
             <v-list-item v-for="link in links" :key="link.text" router :to="link.route">
             <template v-slot:prepend>

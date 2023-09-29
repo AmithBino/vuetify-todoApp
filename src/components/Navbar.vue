@@ -13,6 +13,14 @@
         </v-btn>
        </v-app-bar> 
        <v-navigation-drawer app temporary v-model="drawer" class="bg-purple-darken-3" clipped>
+        <v-row>
+            <v-col class="mt-5 text-center">
+                <v-avatar size="100">
+                    <img src="./assets/avatar1.png">
+                </v-avatar>
+                <p class="text-white text-h6 mt-1">Amith</p>
+            </v-col>
+        </v-row>
         <v-list>
             <v-list-item v-for="link in links" :key="link.text" router :to="link.route">
             <template v-slot:prepend>
